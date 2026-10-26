@@ -1,0 +1,44 @@
+name: m_message
+description: M Message - Material 3 messaging app with AI assistant
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  firebase_storage: ^12.3.4
+  provider: ^6.1.2
+  image_picker: ^1.1.2
+  file_picker: ^8.1.2
+  record: ^5.1.2
+  audioplayers: ^6.1.0
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  cached_network_image: ^3.4.1
+  photo_view: ^0.15.0
+  emoji_picker_flutter: ^4.3.0
+  url_launcher: ^6.3.0
+  intl: ^0.19.0
+  timeago: ^3.7.0
+  shared_preferences: ^2.3.2
+  uuid: ^4.5.1
+  http: ^1.2.2
+  share_plus: ^10.0.2
+  dynamic_color: ^1.7.0
+  permission_handler: ^11.3.1
+  flutter_slidable: ^3.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
