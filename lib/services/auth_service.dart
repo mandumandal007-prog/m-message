@@ -33,15 +33,15 @@ class AuthService {
 
   Future<void> signIn({required String email, required String password}) async {
     await _auth.signInWithEmailAndPassword(email: email.trim(), password: password);
-    await _db.collection('users').doc(_auth.currentUser!.uid).update({
+    await _db.collection('users').doc(_auth.currentUser!.uid).set({
       'lastSeen': FieldValue.serverTimestamp(),
-    });
+    }, SetOptions(merge: true));
   }
 
   Future<void> signOut() async {
     final u = _auth.currentUser;
     if (u != null) {
-      await _db.collection('users').doc(u.uid).update({'lastSeen': FieldValue.serverTimestamp()});
+      await _db.collection('users').doc(u.uid).set({'lastSeen': FieldValue.serverTimestamp()}, SetOptions(merge: true));
     }
     await _auth.signOut();
   }

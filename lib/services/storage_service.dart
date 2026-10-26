@@ -14,7 +14,7 @@ class StorageService {
 
   Future<String> uploadAvatar({required String uid, required File file}) async {
     final ref = _storage.ref().child('avatars/$uid/avatar.jpg');
-    final task = await ref.putFile(file);
+    final task = await ref.putFile(file, SettableMetadata(contentType: 'image/jpeg'));
     return task.ref.getDownloadURL();
   }
 

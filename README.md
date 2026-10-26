@@ -13,17 +13,15 @@ https://github.com/mandumandal007-prog/m-message/releases/latest
 
 The APK is signed with a debug key, so Android may ask to allow "Install unknown apps" and Play Protect may warn - tap "Install anyway".
 
-## Connect Firebase (required for login and chat)
+## Firebase setup
 
-The app needs your own Firebase project. Without it the app opens and shows a "Firebase is not connected yet" screen.
+`android/app/google-services.json` (project `m-message-8f022`, package `com.mmessage.app`) is in the repo. In the Firebase console of that project:
 
-1. Open https://console.firebase.google.com and create (or open) a project.
-2. Project settings > Your apps > **Add app > Android**, package name **`com.mmessage.app`**.
-3. Download **`google-services.json`** and add it to this repo at **`android/app/google-services.json`** (GitHub: Add file > Upload files, inside `android/app`).
-4. In the console enable **Authentication > Email/Password**, **Firestore Database** and **Storage**.
-5. Paste `firestore.rules` and `storage.rules` from this repo into the Firestore and Storage rules tabs.
+1. **Authentication > Sign-in method > Email/Password** - enable it (the app signs up / logs in with email + password).
+2. **Firestore Database > Create database** (production mode), then paste `firestore.rules` from this repo into the **Rules** tab and Publish.
+3. **Storage > Get started** (needed for photos, voice notes, files, status photos and profile pictures; new projects need the pay-as-you-go Blaze plan for Storage, the free quota still applies), then paste `storage.rules` into its **Rules** tab and Publish.
 
-Pushing the file triggers a new build automatically; the next release APK will have working login and chat.
+Text chats work with steps 1-2; media needs step 3. If google-services.json is removed, the app still opens and shows a "Firebase is not connected yet" screen.
 
 ## Build locally
 
