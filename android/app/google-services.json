@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "315999284931",
+    "project_id": "m-message-8f022",
+    "storage_bucket": "m-message-8f022.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315999284931:android:299dd5617ff7e98fa63c76",
+        "android_client_info": {
+          "package_name": "com.mmessage.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCuiTX8xiOwXnrE4C7LDI-SnDwP3Ffmu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
